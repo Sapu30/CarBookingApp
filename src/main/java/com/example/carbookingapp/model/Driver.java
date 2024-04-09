@@ -1,26 +1,30 @@
 package com.example.carbookingapp.model;
 
 public class Driver {
-    private String name;
-    private String gender;
-    private int age;
-    private String vehicleDetails;
-    private String registrationNumber;
-    private double locationX;
-    private double locationY;
-    private boolean available;
+
+    private DriverDetails driverDetails;
+    private VehicleDetails vehicleDetails;
+    private double[] currentLocation;
+
 
     public Driver() {}
 
-    public Driver(String name, String gender, int age, String vehicleDetails, String registrationNumber,
-                  double locationX, double locationY) {
-        this.name = name;
-        this.gender = gender;
-        this.age = age;
+    public Driver(DriverDetails driverDetails, VehicleDetails vehicleDetails, double[] currentLocation) {
+        this.driverDetails = driverDetails;
         this.vehicleDetails = vehicleDetails;
-        this.registrationNumber = registrationNumber;
-        this.locationX = locationX;
-        this.locationY = locationY;
-        this.available = true;
+        this.currentLocation = currentLocation;
     }
+
+    public DriverDetails getDriverDetails() {
+        return driverDetails;
+    }
+
+    public VehicleDetails getVehicleDetails() {
+        return vehicleDetails;
+    }
+
+    public double[] getCurrentLocation() {
+        return currentLocation;
+    }
+
 }
