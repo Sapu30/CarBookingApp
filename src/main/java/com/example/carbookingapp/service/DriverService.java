@@ -33,7 +33,7 @@ public class DriverService {
         return null;
     }
 
-    private boolean isDriverExists(String name) {
+    public boolean isDriverExists(String name) {
         for (Driver driver : drivers) {
             if (driver.getDriverDetails().getName().equals(name)) {
                 return true;
@@ -41,6 +41,9 @@ public class DriverService {
         }
         return false;
     }
+
+
+
 
 //    public void deleteDriver(String name) {
 //        return;

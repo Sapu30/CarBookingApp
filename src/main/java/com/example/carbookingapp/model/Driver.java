@@ -4,12 +4,14 @@ public class Driver {
 
     private DriverDetails driverDetails;
     private VehicleDetails vehicleDetails;
-    private double[] currentLocation;
+    private String currentLocation;
+
+    private boolean available = true;
 
 
     public Driver() {}
 
-    public Driver(DriverDetails driverDetails, VehicleDetails vehicleDetails, double[] currentLocation) {
+    public Driver(DriverDetails driverDetails, VehicleDetails vehicleDetails, String currentLocation) {
         this.driverDetails = driverDetails;
         this.vehicleDetails = vehicleDetails;
         this.currentLocation = currentLocation;
@@ -23,8 +25,17 @@ public class Driver {
         return vehicleDetails;
     }
 
-    public double[] getCurrentLocation() {
+    public String getCurrentLocation() {
         return currentLocation;
+    }
+
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
 
 }

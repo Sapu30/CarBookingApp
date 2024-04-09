@@ -38,8 +38,5 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-//    @DeleteMapping("/delete/user")
-//    public void deleteUser(@PathVariable User user) {
-//        userService.deleteUser(user.getName());
-//    }
+
 }

@@ -33,13 +33,16 @@ public class UserService {
         return new ArrayList<>(users);
     }
 
-    private boolean isUserExists(String name) {
+    public boolean isUserExists(String name) {
         for (User user : users) {
             if (user.getName().equals(name)) {
                 return true;
             }
         }
         return false;
+    }
+
+    public void updateChosenRide(String username, String driverName) {
     }
 
 //    public void deleteUser(String name) {

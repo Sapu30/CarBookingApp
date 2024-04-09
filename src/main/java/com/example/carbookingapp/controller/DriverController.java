@@ -36,9 +36,4 @@ public class DriverController {
         return driverService.getAllDrivers();
     }
 
-//    @DeleteMapping("/delete/driver/driverName")
-//    public void deleteDriver(@PathVariable String name) {
-//        driverService.deleteDriver(name);
-//    }
-
 }
