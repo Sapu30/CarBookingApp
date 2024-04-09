@@ -1,4 +1,4 @@
-package model;
+package com.example.carbookingapp.model;
 
 public class User {
     private String name;

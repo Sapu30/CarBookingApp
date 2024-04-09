@@ -1,9 +1,9 @@
-package controller;
+package com.example.carbookingapp.controller;
 
-import model.User;
+import com.example.carbookingapp.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.UserService;
+import com.example.carbookingapp.service.UserService;
 
 
 import java.util.List;

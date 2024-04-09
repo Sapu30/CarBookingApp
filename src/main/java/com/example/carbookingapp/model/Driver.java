@@ -1,4 +1,4 @@
-package model;
+package com.example.carbookingapp.model;
 
 public class Driver {
     private String name;

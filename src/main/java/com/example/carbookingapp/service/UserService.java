@@ -1,6 +1,6 @@
-package service;
+package com.example.carbookingapp.service;
 
-import model.User;
+import com.example.carbookingapp.model.User;
 import org.springframework.stereotype.Service;
 
 

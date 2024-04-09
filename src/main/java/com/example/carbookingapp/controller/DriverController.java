@@ -1,9 +1,9 @@
-package controller;
+package com.example.carbookingapp.controller;
 
-import model.Driver;
+import com.example.carbookingapp.model.Driver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.DriverService;
+import com.example.carbookingapp.service.DriverService;
 
 import java.util.List;
 

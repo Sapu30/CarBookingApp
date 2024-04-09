@@ -1,6 +1,6 @@
-package service;
+package com.example.carbookingapp.service;
 
-import model.Driver;
+import com.example.carbookingapp.model.Driver;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
