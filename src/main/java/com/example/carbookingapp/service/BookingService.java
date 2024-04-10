@@ -1,7 +1,7 @@
 package com.example.carbookingapp.service;
 
 import com.example.carbookingapp.model.Driver;
-import com.example.carbookingapp.Dtos.RideRequestDto;
+import com.example.carbookingapp.dto.RideRequestDto;
 
 import java.util.List;
 

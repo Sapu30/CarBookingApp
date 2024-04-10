@@ -1,4 +1,4 @@
-package com.example.carbookingapp.Dtos;
+package com.example.carbookingapp.dto;
 
 public class RideRequestDto {
     private String username;

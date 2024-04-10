@@ -1,6 +1,6 @@
 package com.example.carbookingapp;
 
-import com.example.carbookingapp.Dtos.RideRequestDto;
+import com.example.carbookingapp.dto.RideRequestDto;
 import com.example.carbookingapp.model.*;
 import com.example.carbookingapp.service.BookingService;
 import com.example.carbookingapp.service.DriverService;
@@ -21,6 +21,7 @@ public class CarBookingAppApplication {
 	private UserService userService;
 	private DriverService driverService;
 	private BookingService bookingService;
+
 	public CarBookingAppApplication() {
 
 		this.userService = new UserServiceImpl();

@@ -1,8 +1,8 @@
 package com.example.carbookingapp.controller;
 
-import com.example.carbookingapp.Dtos.BookRideDto;
+import com.example.carbookingapp.dto.BookRideDto;
 import com.example.carbookingapp.model.Driver;
-import com.example.carbookingapp.Dtos.RideRequestDto;
+import com.example.carbookingapp.dto.RideRequestDto;
 import com.example.carbookingapp.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
