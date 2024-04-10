@@ -1,17 +1,18 @@
 package com.example.carbookingapp;
 
+import com.example.carbookingapp.Dtos.RideRequestDto;
 import com.example.carbookingapp.model.*;
 import com.example.carbookingapp.service.BookingService;
 import com.example.carbookingapp.service.DriverService;
 import com.example.carbookingapp.service.UserService;
 import com.example.carbookingapp.serviceImpl.BookingServiceImpl;
+import com.example.carbookingapp.serviceImpl.DriverServiceImpl;
+import com.example.carbookingapp.serviceImpl.UserServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @SpringBootApplication(exclude = {
 	DataSourceAutoConfiguration.class})
@@ -22,8 +23,8 @@ public class CarBookingAppApplication {
 	private BookingService bookingService;
 	public CarBookingAppApplication() {
 
-		this.userService = new UserService();
-		this.driverService = new DriverService();
+		this.userService = new UserServiceImpl();
+		this.driverService = new DriverServiceImpl();
 		this.bookingService = new BookingServiceImpl();
 
 	}
@@ -61,7 +62,6 @@ public class CarBookingAppApplication {
 		bookingService.chooseRide("Rahul", "Driver2");
 
 	}
-
 
 	public static void main(String[] args) {
 		SpringApplication.run(CarBookingAppApplication.class, args);

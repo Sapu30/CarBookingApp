@@ -1,8 +1,8 @@
 package com.example.carbookingapp.controller;
 
-import com.example.carbookingapp.model.BookRide;
+import com.example.carbookingapp.Dtos.BookRideDto;
 import com.example.carbookingapp.model.Driver;
-import com.example.carbookingapp.model.RideRequestDto;
+import com.example.carbookingapp.Dtos.RideRequestDto;
 import com.example.carbookingapp.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,7 +28,7 @@ public class BookingController {
     }
 
     @PostMapping("/choose")
-    public ResponseEntity<?> chooseRide(@RequestBody BookRide bookRide) {
+    public ResponseEntity<?> chooseRide(@RequestBody BookRideDto bookRide) {
         String chosenRide = bookingService.chooseRide(bookRide.getUsername(), bookRide.getDriverName());
         if (chosenRide != null) {
             return ResponseEntity.ok("Ride chosen for user " + bookRide.getUsername() + " with driver " + bookRide.getDriverName());

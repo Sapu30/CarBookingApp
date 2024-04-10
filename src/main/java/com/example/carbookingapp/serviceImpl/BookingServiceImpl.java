@@ -1,5 +1,6 @@
 package com.example.carbookingapp.serviceImpl;
 
+import com.example.carbookingapp.Dtos.RideRequestDto;
 import com.example.carbookingapp.model.*;
 import com.example.carbookingapp.service.BookingService;
 import com.example.carbookingapp.service.DriverService;
@@ -95,7 +96,6 @@ public class BookingServiceImpl implements BookingService {
                 return "Driver Booked Already, Please find Another";
             }
         }
-
         return "Error Occured while Booking Driver";
     }
 

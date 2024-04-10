@@ -7,45 +7,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
-public class UserService {
-    private List<User> users = new ArrayList<>();
 
-    public void addUser(User user) {
-        if (!isUserExists(user.getName())) {
-            users.add(user);
-        } else {
-            // Handle duplicate user
-            System.out.println("User with name " + user.getName() + " already exists.");
-        }
-    }
+public interface UserService {
+    public void addUser(User user);
 
-    public User getUserByName(String name) {
-        for (User user : users) {
-            if (user.getName().equals(name)) {
-                return user;
-            }
-        }
-        return null;
-    }
+    public User getUserByName(String name);
 
-    public List<User> getAllUsers() {
-        return new ArrayList<>(users);
-    }
+    public List<User> getAllUsers();
 
-    public boolean isUserExists(String name) {
-        for (User user : users) {
-            if (user.getName().equals(name)) {
-                return true;
-            }
-        }
-        return false;
-    }
+    public boolean isUserExists(String name);
 
-    public void updateChosenRide(String username, String driverName) {
-    }
-
-//    public void deleteUser(String name) {
-//        return;
-//    }
 }

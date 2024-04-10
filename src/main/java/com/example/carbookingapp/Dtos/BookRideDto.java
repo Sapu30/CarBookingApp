@@ -1,10 +1,10 @@
-package com.example.carbookingapp.model;
+package com.example.carbookingapp.Dtos;
 
-public class BookRide {
+public class BookRideDto {
     private String username;
     private String driverName;
 
-    public BookRide(String username, String driverName) {
+    public BookRideDto(String username, String driverName) {
         this.username = username;
         this.driverName = driverName;
     }
