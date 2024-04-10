@@ -13,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 import java.util.List;
+import java.util.Scanner;
 
 @SpringBootApplication(exclude = {
 	DataSourceAutoConfiguration.class})
@@ -52,15 +53,31 @@ public class CarBookingAppApplication {
 		String l3 = "5,3";
 		driverService.addDriver(new Driver(d3, v3, l3));
 
-		// Find available rides
+//		 Find available rides
 		System.out.println("Available rides:");
 		List<Driver> rides = bookingService.findRide(new RideRequestDto("Rahul", "10,0", "15,3"));
 		for (Driver ride : rides) {
-			System.out.println("Driver: " + ride.getDriverDetails().getName() + ", Vehicle: " + ride.getVehicleDetails() + ", Location: " + ride.getCurrentLocation());
+			System.out.println("Driver: " + ride.getDriverDetails().getName() + ", Vehicle: " + ride.getVehicleDetails().getVehicleNumber()+ ", Location: " + ride.getCurrentLocation());
 		}
 
-		// Choose a ride
-		bookingService.chooseRide("Rahul", "Driver2");
+
+//		// Choose a ride
+		if (rides.isEmpty()) {
+			System.out.println("No rides available.");
+		} else {
+			for (int i = 0; i < rides.size(); i++) {
+				System.out.println((i + 1) + ". " + rides.get(i).getDriverDetails().getName());
+			}
+			Scanner scanner = new Scanner(System.in);
+			System.out.print("Choose a ride: ");
+			String driverName = scanner.nextLine();
+				bookingService.chooseRide("Rahul", driverName);
+				if(driverName.equals(rides.get(0).getDriverDetails().getName())){
+					System.out.println("Ride chosen successfully.");
+				}else{
+					System.out.println("Driver not availble");
+				}
+		}
 
 	}
 
